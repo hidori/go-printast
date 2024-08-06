@@ -1,4 +1,4 @@
-# printast
+# Go: printast
 
 Prints AST (Abstract Syntax Tree)
 
