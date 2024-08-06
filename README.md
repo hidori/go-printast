@@ -16,7 +16,7 @@ usage: printast <FILE>
 
 ## EXAMPLES
 
-### Example #1
+### INPUT
 
 example.go
 
@@ -30,11 +30,13 @@ func main() {
 }
 ```
 
-run CLI
+### RUN
 
 ```bash
 printast example.go > example.txt
 ```
+
+### OUTPUT
 
 example.txt
 
