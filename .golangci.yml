@@ -1,29 +1,34 @@
+version: "2"
 run:
-  timeout: 5m
-  allow-parallel-runners: true
   tests: false
-
+  allow-parallel-runners: true
 linters:
-  enable-all: true
+  default: all
   disable:
     - depguard
     - err113
-    - execinquery
     - exhaustive
     - exhaustruct
     - forbidigo
     - gochecknoglobals
-    - gomnd
+    - mnd
     - revive
-    - stylecheck
     - varnamelen
-
-issues:
-  exclude-use-default: false
-  exclude-generated: lax
-  exclude-dirs-use-default: false
-  exclude-dirs:
-    - test
-    - example
-  exclude-files:
-    - '(.+)_test\.go'
+  exclusions:
+    generated: lax
+    paths:
+      - (.+)_test\.go
+      - test
+      - example
+formatters:
+  enable:
+    - gci
+    - gofmt
+    - gofumpt
+    - goimports
+  exclusions:
+    generated: lax
+    paths:
+      - (.+)_test\.go
+      - test
+      - example

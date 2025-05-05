@@ -33,12 +33,10 @@ func main() {
 ### RUN
 
 ```bash
-printast example.go > example.txt
+printast example.go
 ```
 
 ### OUTPUT
-
-example.txt
 
 ```text
      0  *ast.File {
